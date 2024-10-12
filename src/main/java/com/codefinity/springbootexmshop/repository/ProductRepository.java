@@ -10,9 +10,9 @@ import java.util.List;
 public class ProductRepository {
     private final List<Product> products = new ArrayList<>(
             List.of(
-                    new Product(200, "product1"),
-                    new Product(100, "product2"),
-                    new Product(300, "product3")
+                    new Product("product1",200),
+                    new Product("product2", 100),
+                    new Product("product3", 300)
             )
     );
 
