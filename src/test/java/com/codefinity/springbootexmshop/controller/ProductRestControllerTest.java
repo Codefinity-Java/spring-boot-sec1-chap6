@@ -27,7 +27,7 @@ public class ProductRestControllerTest {
     private ProductService productService;
 
     @Test
-    public void testFindProductByName() throws Exception {
+    public void testFindProductByName_whenProductExists_shouldReturnProductDetails() throws Exception {
         Product product = new Product("product1", 100);
         when(productService.getProductByName("product1")).thenReturn(product);
 

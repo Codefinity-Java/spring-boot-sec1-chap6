@@ -17,14 +17,14 @@ public class ProductRepositoryTest {
     }
 
     @Test
-    public void testFindByName() {
+    public void testFindByName_whenProductExists_shouldReturnProduct() {
         Product foundProduct = productRepository.findByName("product1");
         assertEquals("product1", foundProduct.getName());
         assertEquals(200, foundProduct.getPrice());
     }
 
     @Test
-    public void testFindByName_NotFound() {
+    public void testFindByName_whenProductDoesNotExist_shouldReturnNull() {
         Product foundProduct = productRepository.findByName("Nonexistent Product");
         assertNull(foundProduct);
     }

@@ -21,7 +21,7 @@ public class ProductServiceTest {
     private ProductService productService;
 
     @Test
-    public void testGetProductByName() {
+    public void testGetProductByName_whenProductExists_shouldReturnProduct() {
         Product product = new Product("Test Product", 100);
         when(productRepository.findByName("Test Product")).thenReturn(product);
 
